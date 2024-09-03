@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "genero": "Ficção Científica",
+      "descricao": "Filmes que exploram temas imaginativos como futuros distópicos, tecnologia avançada, viagens espaciais e outras realidades científicas ou pseudocientíficas."
+    },
+    {
+      "id": 2,
+      "genero": "Ação",
+      "descricao": "Filmes que enfatizam cenas intensas, geralmente com lutas, perseguições e outros elementos que aceleram o ritmo da narrativa."
+    },
+    {
+      "id": 3,
+      "genero": "Drama",
+      "descricao": "Filmes que focam em temas emocionais e interações pessoais, geralmente explorando o lado sério e realista das vidas humanas."
+    },
+    {
+      "id": 4,
+      "genero": "Crime",
+      "descricao": "Filmes que exploram temas relacionados a crimes, incluindo histórias de detetives, máfia, e investigações criminais."
+    }
+  ]
+  
