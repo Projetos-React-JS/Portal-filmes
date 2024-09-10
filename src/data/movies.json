@@ -1,103 +1,112 @@
 [
-    {
-      "id": 1,
-      "titulo": "Inception",
-      "descricao": "Um ladrão que invade os sonhos das pessoas para roubar segredos corporativos enfrenta o desafio de implantar uma ideia na mente de um alvo.",
-      "ano_lancamento": 2010,
-      "genero": "Ficção Científica",
-      "diretor": "Christopher Nolan",
-      "avaliacao": 8.8,
-      "imagem_destaque": "inception.jpg"
-    },
-    {
-      "id": 2,
-      "titulo": "The Dark Knight",
-      "descricao": "Batman enfrenta o Coringa, um criminoso anárquico que deseja levar Gotham City ao caos.",
-      "ano_lancamento": 2008,
-      "genero": "Ação",
-      "diretor": "Christopher Nolan",
-      "avaliacao": 9.0,
-      "imagem_destaque": "dark_knight.jpg"
-    },
-    {
-      "id": 3,
-      "titulo": "Interstellar",
-      "descricao": "Um grupo de exploradores viaja através de um buraco de minhoca para garantir a sobrevivência da humanidade.",
-      "ano_lancamento": 2014,
-      "genero": "Ficção Científica",
-      "diretor": "Christopher Nolan",
-      "avaliacao": 8.6,
-      "imagem_destaque": "interstellar.jpg"
-    },
-    {
-      "id": 4,
-      "titulo": "Parasite",
-      "descricao": "Uma família pobre se infiltra na vida de uma família rica, levando a consequências inesperadas.",
-      "ano_lancamento": 2019,
-      "genero": "Drama",
-      "diretor": "Bong Joon Ho",
-      "avaliacao": 8.6,
-      "imagem_destaque": "parasite.jpg"
-    },
-    {
-      "id": 5,
-      "titulo": "The Matrix",
-      "descricao": "Um hacker descobre que a realidade é uma simulação e junta-se a um grupo de rebeldes para lutar contra seus controladores.",
-      "ano_lancamento": 1999,
-      "genero": "Ficção Científica",
-      "diretor": "Lana Wachowski, Lilly Wachowski",
-      "avaliacao": 8.7,
-      "imagem_destaque": "matrix.jpg"
-    },
-    {
-      "id": 6,
-      "titulo": "Pulp Fiction",
-      "descricao": "Histórias interconectadas de crime e redenção em Los Angeles, dirigidas por Quentin Tarantino.",
-      "ano_lancamento": 1994,
-      "genero": "Crime",
-      "diretor": "Quentin Tarantino",
-      "avaliacao": 8.9,
-      "imagem_destaque": "pulp_fiction.jpg"
-    },
-    {
-      "id": 7,
-      "titulo": "The Shawshank Redemption",
-      "descricao": "Um homem condenado à prisão perpétua encontra redenção e amizade ao longo de duas décadas.",
-      "ano_lancamento": 1994,
-      "genero": "Drama",
-      "diretor": "Frank Darabont",
-      "avaliacao": 9.3,
-      "imagem_destaque": "shawshank_redemption.jpg"
-    },
-    {
-      "id": 8,
-      "titulo": "The Godfather",
-      "descricao": "A história da ascensão e queda da família mafiosa Corleone.",
-      "ano_lancamento": 1972,
-      "genero": "Crime",
-      "diretor": "Francis Ford Coppola",
-      "avaliacao": 9.2,
-      "imagem_destaque": "godfather.jpg"
-    },
-    {
-      "id": 9,
-      "titulo": "Fight Club",
-      "descricao": "Um homem insatisfeito com sua vida inicia um clube de luta clandestino com um vendedor de sabonetes carismático.",
-      "ano_lancamento": 1999,
-      "genero": "Drama",
-      "diretor": "David Fincher",
-      "avaliacao": 8.8,
-      "imagem_destaque": "fight_club.jpg"
-    },
-    {
-      "id": 10,
-      "titulo": "Forrest Gump",
-      "descricao": "Um homem com QI abaixo da média relata sua vida extraordinária e seu impacto em eventos históricos.",
-      "ano_lancamento": 1994,
-      "genero": "Drama",
-      "diretor": "Robert Zemeckis",
-      "avaliacao": 8.8,
-      "imagem_destaque": "forrest_gump.jpg"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "titulo": "Inception",
+    "descricao": "Um ladrão que invade os sonhos das pessoas para roubar segredos corporativos enfrenta o desafio de implantar uma ideia na mente de um alvo.",
+    "sinopse": "Dom Cobb é um ladrão habilidoso, o melhor na perigosa arte da extração: o roubo de valiosos segredos do subconsciente durante o estado de sonho, quando a mente está mais vulnerável. Cobb ganha essa rara habilidade em um traiçoeiro novo trabalho, no qual ele não precisa roubar uma ideia, mas plantar uma.",
+    "ano_lancamento": 2010,
+    "genero": "Ficção Científica",
+    "diretor": "Christopher Nolan",
+    "avaliacao": 8.8,
+    "imagem_destaque": "inception.jpg"
+  },
+  {
+    "id": 2,
+    "titulo": "The Dark Knight",
+    "descricao": "Batman enfrenta o Coringa, um criminoso anárquico que deseja levar Gotham City ao caos.",
+    "sinopse": "Com a ajuda de Jim Gordon e do promotor público Harvey Dent, Batman tem mantido o crime sob controle em Gotham City. No entanto, um novo e sádico criminoso conhecido como Coringa surge, jogando Gotham no caos e forçando Batman a caminhar na linha tênue entre heroísmo e vigilância.",
+    "ano_lancamento": 2008,
+    "genero": "Ação",
+    "diretor": "Christopher Nolan",
+    "avaliacao": 9.0,
+    "imagem_destaque": "dark_knight.jpg"
+  },
+  {
+    "id": 3,
+    "titulo": "Interstellar",
+    "descricao": "Um grupo de exploradores viaja através de um buraco de minhoca para garantir a sobrevivência da humanidade.",
+    "sinopse": "Em um futuro onde a Terra está morrendo, um grupo de exploradores embarca em uma missão espacial através de um buraco de minhoca para encontrar um novo lar para a humanidade, enfrentando dilemas científicos e emocionais ao longo do caminho.",
+    "ano_lancamento": 2014,
+    "genero": "Ficção Científica",
+    "diretor": "Christopher Nolan",
+    "avaliacao": 8.6,
+    "imagem_destaque": "interstellar.jpg"
+  },
+  {
+    "id": 4,
+    "titulo": "Parasite",
+    "descricao": "Uma família pobre se infiltra na vida de uma família rica, levando a consequências inesperadas.",
+    "sinopse": "Os membros da família Kim, vivendo em um porão infestado de insetos, lutam para sobreviver. Quando o filho mais velho, Ki-woo, consegue um emprego como tutor de inglês para uma família rica, os Kims veem uma oportunidade para melhorar sua vida, mas segredos e desconfianças começam a aflorar.",
+    "ano_lancamento": 2019,
+    "genero": "Drama",
+    "diretor": "Bong Joon Ho",
+    "avaliacao": 8.6,
+    "imagem_destaque": "parasite.jpg"
+  },
+  {
+    "id": 5,
+    "titulo": "The Matrix",
+    "descricao": "Um hacker descobre que a realidade é uma simulação e junta-se a um grupo de rebeldes para lutar contra seus controladores.",
+    "sinopse": "Thomas Anderson, um programador de computador, descobre que o mundo em que vive é uma simulação controlada por máquinas. Sob a identidade de Neo, ele se junta a um grupo de rebeldes para lutar contra as máquinas e libertar a humanidade.",
+    "ano_lancamento": 1999,
+    "genero": "Ficção Científica",
+    "diretor": "Lana Wachowski, Lilly Wachowski",
+    "avaliacao": 8.7,
+    "imagem_destaque": "matrix.jpg"
+  },
+  {
+    "id": 6,
+    "titulo": "Pulp Fiction",
+    "descricao": "Histórias interconectadas de crime e redenção em Los Angeles, dirigidas por Quentin Tarantino.",
+    "sinopse": "O filme entrelaça várias histórias, como a de um boxeador envelhecido que tenta escapar da máfia e dois assassinos de aluguel que debatem filosofia enquanto realizam seus trabalhos. Estas histórias convergem em um emaranhado de violência, humor negro e diálogos brilhantes.",
+    "ano_lancamento": 1994,
+    "genero": "Crime",
+    "diretor": "Quentin Tarantino",
+    "avaliacao": 8.9,
+    "imagem_destaque": "pulp_fiction.jpg"
+  },
+  {
+    "id": 7,
+    "titulo": "The Shawshank Redemption",
+    "descricao": "Um homem condenado à prisão perpétua encontra redenção e amizade ao longo de duas décadas.",
+    "sinopse": "Andy Dufresne, um banqueiro condenado injustamente por assassinato, cumpre uma sentença de prisão perpétua na penitenciária de Shawshank. Ao longo dos anos, ele cria uma amizade com outro prisioneiro, Red, e encontra formas inesperadas de sobrevivência e redenção.",
+    "ano_lancamento": 1994,
+    "genero": "Drama",
+    "diretor": "Frank Darabont",
+    "avaliacao": 9.3,
+    "imagem_destaque": "shawshank_redemption.jpg"
+  },
+  {
+    "id": 8,
+    "titulo": "The Godfather",
+    "descricao": "A história da ascensão e queda da família mafiosa Corleone.",
+    "sinopse": "Don Vito Corleone, o chefe da poderosa família mafiosa Corleone, tenta garantir um futuro para seus filhos enquanto enfrenta rivais no mundo do crime. O poder, a família e o legado entram em conflito enquanto a família luta para manter sua influência.",
+    "ano_lancamento": 1972,
+    "genero": "Crime",
+    "diretor": "Francis Ford Coppola",
+    "avaliacao": 9.2,
+    "imagem_destaque": "godfather.jpg"
+  },
+  {
+    "id": 9,
+    "titulo": "Fight Club",
+    "descricao": "Um homem insatisfeito com sua vida inicia um clube de luta clandestino com um vendedor de sabonetes carismático.",
+    "sinopse": "Um homem comum e frustrado com seu emprego e estilo de vida conhece Tyler Durden, um vendedor de sabonetes excêntrico, e juntos fundam o 'Clube da Luta', onde homens podem extravasar sua raiva através da violência física. À medida que o clube cresce, suas consequências tornam-se inesperadas.",
+    "ano_lancamento": 1999,
+    "genero": "Drama",
+    "diretor": "David Fincher",
+    "avaliacao": 8.8,
+    "imagem_destaque": "fight_club.jpg"
+  },
+  {
+    "id": 10,
+    "titulo": "Forrest Gump",
+    "descricao": "Um homem com QI abaixo da média relata sua vida extraordinária e seu impacto em eventos históricos.",
+    "sinopse": "Forrest Gump, um homem com QI limitado mas com um coração puro, vive uma vida incrível, influenciando grandes eventos históricos nos EUA e experimentando momentos marcantes, tudo enquanto procura pelo amor de sua vida, Jenny.",
+    "ano_lancamento": 1994,
+    "genero": "Drama",
+    "diretor": "Robert Zemeckis",
+    "avaliacao": 8.8,
+    "imagem_destaque": "forrest_gump.jpg"
+  }
+]
