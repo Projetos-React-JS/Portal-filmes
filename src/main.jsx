@@ -8,6 +8,7 @@ import MovieListPage from './pages/MovieListPage.jsx'
 import MovieDetailPage from './pages/MovieDetailPage.jsx'
 import Home from './pages/Home.jsx'
 import GenreList from './pages/GenreList.jsx'
+import PageNotFound from './pages/PageNotFound.jsx'
 
 const router= createBrowserRouter([
   {
@@ -18,7 +19,8 @@ const router= createBrowserRouter([
       {path: '/movies', element: <MovieListPage />},
       {path: '/movies/:id', element: <MovieDetailPage />},
       {path: '/genre', element: <GenreList />},
-      {path: '/genre/:id', element: <MoviesByGenrePage />}
+      {path: '/genre/:id', element: <MoviesByGenrePage />},
+      {path: '*', element: <PageNotFound/>}
     ]
     
   }
