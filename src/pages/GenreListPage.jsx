@@ -1,4 +1,4 @@
-export default function GenrePage(){
+export default function GenreListPage(){
     return(
         <>
         <h1>Genre Page</h1>

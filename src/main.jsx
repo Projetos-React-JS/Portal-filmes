@@ -5,10 +5,11 @@ import './index.css'
 
 {/* Deve ter as rotas:
   home
-  lista de filmes(ela será o conteúdo da home)
-  gêneros
-  filmes por gênero
-  detalhes do filme
+  filmes
+  Detalhes do Filme
+  Lista de gêneros
+  Filmes por gênero
+  Page Not Found
   */}
 
 createRoot(document.getElementById('root')).render(
