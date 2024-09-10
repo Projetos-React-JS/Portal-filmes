@@ -6,17 +6,19 @@ import './index.css'
 import MoviesByGenrePage from './pages/MoviesByGenrePage.jsx'
 import MovieListPage from './pages/MovieListPage.jsx'
 import MovieDetailPage from './pages/MovieDetailPage.jsx'
-import GenrePage from './pages/GenrePage.jsx'
+import Home from './pages/Home.jsx'
+import GenreList from './pages/GenreList.jsx'
 
 const router= createBrowserRouter([
   {
     path: '/',
     element: <App />,
     children: [
-      {index: true, element: <MovieListPage />},
-      {path: '/movie/:id', element: <MovieDetailPage />},
-      {path: '/genre', element: <MoviesByGenrePage />},
-      {path: '/genre/:id', element: <GenrePage />}
+      {index: true, element: <Home />},
+      {path: '/movies', element: <MovieListPage />},
+      {path: '/movies/:id', element: <MovieDetailPage />},
+      {path: '/genre', element: <GenreList />},
+      {path: '/genre/:id', element: <MoviesByGenrePage />}
     ]
     
   }
