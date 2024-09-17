@@ -12,7 +12,7 @@ export default function MovieDetailPage(){
             movie ?
                 <div key={movie.id}>
                     <h2>{movie.titulo}</h2>
-                    <img src={movie.imagem_destaque} alt={movie.titulo} />
+                    <img src={`/${movie.imagem_destaque}`} alt={movie.titulo} />
                     <p>{movie.sinopse}</p>
                     <p>{movie.diretor}</p>
                 </div>
