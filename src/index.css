@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ACTIVE DO NAVLINK */
+/* ACTIVE DO NAVLINK (Só funciona nele) */
 
-.active{
+.active {
   border-bottom: 2px solid white;
 }
