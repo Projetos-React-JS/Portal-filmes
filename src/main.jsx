@@ -15,6 +15,7 @@ import MovieDetailPage from './pages/MovieDetailPage.jsx'
 import MovieListPage from './pages/MovieListPage.jsx'
 import MoviesByGenrePage from './pages/MoviesByGenrePage.jsx'
 
+
 const router = createBrowserRouter(
   [
     {
@@ -38,6 +39,7 @@ const router = createBrowserRouter(
           path: '/Filmes/:id',
           element:<MoviesByGenrePage/>
         }
+        
       ]
     }
   ]
