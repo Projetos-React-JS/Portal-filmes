@@ -8,7 +8,6 @@ export default function MovieListPage(){
     const [filteredMovies, setFilteredMovies] = useState(data);
 
     function handleClick(e){
-      e.preventDefault();
       setSearch(e.target.value);
 
       const filmesFiltrados = data.filter(movie => ( movie.titulo.toLowerCase().includes(search.toLowerCase()) ));
