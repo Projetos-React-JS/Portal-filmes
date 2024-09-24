@@ -1,21 +1,18 @@
+import GenreCard from '../components/GenreCard';
 import data from '../data/genres.json';
 
 export default function GenreList(){
     return(
         <>
-        <h1>Genre Page</h1>
+         <h2 className='col-span-4 text-2xl font-bold text-center mb-5'>Veja os filmes por gênero</h2>
+         <main className='flex flex-wrap gap-10 justify-center'>
         {
-            data.map((genre) => {
-                return(
-                    <div key={genre.id}>
-                        <h2>{genre.genero}</h2>
-                    </div>
+            data.map((genre) => (
+                    <GenreCard key={genre.id} {...genre}/>
                 )
-            })
+            )
         }
-         {/*Lista todos os gêneros disponíveis em um formato de card,
-        cada um com uma cor de fundo diferente, com um link 
-        para uma página que exibe filmes pertencentes a esse gênero. */}
+        </main>
         </>
     )
 }
