@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import MovieCard from '../components/MovieCard';
 import movies from '../data/movies.json';
+import 'ldrs/helix'
+
 
 export default function MovieListPage() {
 
@@ -24,10 +26,12 @@ export default function MovieListPage() {
             className=' text-black p-2 mb-5 border border-gray-300 rounded-md' />
         </form>
         {
+          filmesFiltrados.length > 0 ?
           filmesFiltrados.map((movie) => (
             <MovieCard key={movie.id} {...movie} />
-          )
-          )
+          ))
+          :
+          <p> Filme não encontrado</p>
         }
       </main>
     </>
