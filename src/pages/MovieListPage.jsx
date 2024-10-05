@@ -11,7 +11,7 @@ export default function MovieListPage() {
         console.log(search)
     }
 
-    const filmesFiltrados = movies.filter( filme => filme.titulo.toLowerCase().includes(search.toLowerCase()))
+    const filmesFiltrados = movies.filter(filme => filme.titulo.toLowerCase().includes(search.toLowerCase()))
 
     return (
         <>
@@ -25,11 +25,14 @@ export default function MovieListPage() {
             />
             <section className="flex">
                 {
-                    
-                    filmesFiltrados
-                        .map(filme => (
-                            <MovieCard key={filme.id} {...filme} />
-                        ))
+                    filmesFiltrados.length > 0 ?
+
+                        filmesFiltrados
+                            .map(filme => (
+                                <MovieCard key={filme.id} {...filme} />
+                            ))
+                        :
+                        <p> Filme não encontrado</p>
                 }
             </section>
         </>
