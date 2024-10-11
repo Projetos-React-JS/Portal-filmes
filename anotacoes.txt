@@ -1,0 +1,32 @@
+https://developer.themoviedb.org/docs/getting-started
+
+HTTP
+POST
+PUT
+GET
+DELETE
+
+CRUD
+CREATE
+READ
+UPDATE
+DELETE
+
+FILMES POPULARES
+Como fazer a importação dos dados em várias linguages diferentes
+JS | Fetch
+https://developer.themoviedb.org/reference/movie-popular-list
+https://api.themoviedb.org/3/movie/popular
+
+Aceita alguns parâmetros (Query Params)
+Idioma, Região
+Filmes Populares em Português
+https://api.themoviedb.org/3/movie/popular?api_key=dfe71aa6c18663df6bca1d802ada547f&language=pt-BR
+MINHA API KEY
+dfe71aa6c18663df6bca1d802ada547f
+https://api.themoviedb.org/3/movie/popular?api_key=dfe71aa6c18663df6bca1d802ada547f
+
+Parecido com postman, mas web   
+Jogar a URL com a API e o Lang pra mandar e pegar o JSON com GET
+GET
+https://hoppscotch.io/
