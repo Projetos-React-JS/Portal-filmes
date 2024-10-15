@@ -27,7 +27,7 @@ const next = () => {
     <div className="flex items-center gap-4">
       <Button
         variant="text"
-        className="flex items-center gap-2 rounded-full"
+        className="flex items-center gap-2 rounded-full text-white"
         onClick={prev}
         disabled={currentPage === 1}
       >
@@ -42,7 +42,7 @@ const next = () => {
       </div>
       <Button
         variant="text"
-        className="flex items-center gap-2 rounded-full"
+        className="flex items-center gap-2 rounded-full text-white"
         onClick={next}
         disabled={currentPage === 10}
       >
