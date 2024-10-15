@@ -12,7 +12,6 @@
   "dependencies": {
     "@heroicons/react": "^2.1.5",
     "@material-tailwind/react": "^2.1.10",
-    "heroicons": "^2.1.5",
     "ldrs": "^1.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
