@@ -11,6 +11,8 @@ import GenreList from './pages/GenreList.jsx'
 import PageNotFound from './pages/PageNotFound.jsx'
 import Contato from './pages/Contato.jsx'
 
+import { ThemeProvider } from "@material-tailwind/react";
+
 const router= createBrowserRouter([
   {
     path: '/',
@@ -29,6 +31,8 @@ const router= createBrowserRouter([
 ])
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <ThemeProvider>
     <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>,
 )

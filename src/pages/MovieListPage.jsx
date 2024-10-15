@@ -1,16 +1,29 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MovieCard from '../components/MovieCard';
-import movies from '../data/movies.json';
-import 'ldrs/helix'
-
+import 'ldrs/bouncy'
+import { CircularPagination } from '../components/CircularPagination';
 
 export default function MovieListPage() {
 
   const [search, setSearch] = useState('');
+  const [filmes, setFilmes] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
 
+  useEffect(() => {
+    setTimeout(() => {
+    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=7c572a9f5b3ba776080330d23bb76e1e&language=pt-br&page=${currentPage}`)
+    .then(response => response.json())
+    .then(data => {
+      setFilmes(data.results);
+      setTotalPages(data.total_pages);
+    })
+    .catch(error => console.error(error))
+    .finally(() => console.log('fetch finalizado'));
+    }, 3000);
+  }, [currentPage]);
 
-  const filmesFiltrados = movies.filter(movie => (movie.titulo.toLowerCase().includes(search.toLowerCase())));
-
+  const filmesFiltrados = filmes.filter(movie => (movie.title.toLowerCase().includes(search.toLowerCase())));
 
 
   return (
@@ -31,8 +44,20 @@ export default function MovieListPage() {
             <MovieCard key={movie.id} {...movie} />
           ))
           :
-          <p> Filme não encontrado</p>
+          <div className='col-span-4 mt-5'>
+          <l-bouncy
+            size="45"
+            speed="1.75"
+            color="white" 
+          ></l-bouncy>
+          </div>
         }
+        <div className='col-span-4 flex justify-center'>
+          <CircularPagination 
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={setCurrentPage}/>
+        </div>
       </main>
     </>
   )
