@@ -1,6 +1,5 @@
 import { Button, IconButton } from "@material-tailwind/react";
 import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
  
 export function CircularPagination({totalPages, currentPage, onPageChange}) {
   const displayedPages = totalPages > 10 ? 10 : totalPages;
