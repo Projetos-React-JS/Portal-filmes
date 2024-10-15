@@ -32,3 +32,5 @@ createRoot(document.getElementById('root')).render(
 )
 
 //https://github.com/Projetos-React-JS/Portal-filmes/tree/Site-construido/src
+//https://mockapi.io/
+//promisse.All
