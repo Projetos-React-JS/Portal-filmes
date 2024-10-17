@@ -1,15 +1,29 @@
 import { useState, useEffect } from "react";
-import movies from "../data/movies.json";
 import MovieCard from "../components/MovieCard";
+// import movies from "../data/movies.json";
+// import MovieCard from "../components/MovieCard";
 
 // Abandonaremos o JSON, consumindo dados da API do The Movie Database (TMDb)
 
 export default function MovieListPage() {
     const [search, setSearch] = useState("");
-    
+    // LIB DE LOADERS
+    // https://www.uiball.com/ldrs/
     // Estado para armazenar os filmes de forma dinâmica
     // Ele começa vazio, mas será preenchido com os dados da API
     const [filmes, setFilmes] = useState([]);
+    const [isLoading, setIsLoading] = useState(false)
+
+    useEffect(() => {
+        setIsLoading(true)
+        setTimeout(()=>{
+        fetch("https://api.themoviedb.org/3/movie/popular?api_key=dfe71aa6c18663df6bca1d802ada547f&language=pt-BR")
+        .then(res => res.json())
+        .then(data => setFilmes(data.results))
+        .catch(err => console.error(err))
+        .finally(() => setIsLoading(false))
+    }, 5000)
+    }, []);
 
     // Peguei a resposta e transformei em JSON
     // Poderia ser qualquer texto, só coloquei res e data para ficar mais claro
@@ -22,13 +36,6 @@ export default function MovieListPage() {
 
     // useEffect é um hook que executa uma função toda vez que o componente é renderizado
     // É muito útil para fazer requisições, pois ele executa a função após a renderização
-    useEffect(() => {
-        fetch("https://api.themoviedb.org/3/movie/popular?api_key=dfe71aa6c18663df6bca1d802ada547f&language=pt-BR")
-        .then(res => res.json())
-        .then(data => setFilmes(data.results))
-        .catch(err => console.error(err))
-        .finally(() => console.log("Finalizado!"))
-    }, []);
 
     // Array de dependências vazio, executa uma única vez
     // Se não tiver o array de dependências, ele executa toda vez que o componente é renderizado
@@ -49,8 +56,9 @@ export default function MovieListPage() {
         console.log(search);
     };
 
-    const filmesFiltrados = movies.filter((filme) =>
-        filme.titulo.toLowerCase().includes(search.toLocaleLowerCase())
+    // Mudando movies pra filmes e titulo para title
+    const filmesFiltrados = filmes.filter((filme) =>
+        filme.title.toLowerCase().includes(search.toLocaleLowerCase())
     );
 
     return (
@@ -65,26 +73,17 @@ export default function MovieListPage() {
                 onChange={handleSearch}
                 placeholder="Buscar filmes..."
             />
-            <section className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
-                {/* ANTIGO, USANDO O FILTRO DE FILMES DO DATA */}
-                {/* {filmesFiltrados.length > 0 ?
-                    filmesFiltrados.map((filme) => (
-                    <MovieCard key={filme.id} {...filme} />
-                )):
-                <p>Não existem filmes na busca</p>} */}
-
-                {/* NOVO, USANDO A API DO TMDb */}
+            <section className="flex">
                 {
-                    filmes.map(filme => (
-                        <>
-                        <h1>{filme.title}</h1>
-                        <h2>{filme.overview}</h2>
-                        <img src={`https://image.tmdb.org/t/p/w342${filme.poster_path}`}/>
-                        <img src={`https://image.tmdb.org/t/p/w1280${filme.backdrop_path}`}/>
-                        <br />
-                        <br />
-                        </>
-                    ))
+                    isLoading ? <p>Carregando...</p>
+                    :
+                    filmesFiltrados.length > 0 ? 
+                        filmesFiltrados
+                        .map(filme => (
+                            <MovieCard key={filme.id} {...filme}/>
+                        ))
+                    :
+                    <p>Filme não encontrado</p>
                 }
             </section>
         </div>
