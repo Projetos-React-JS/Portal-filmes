@@ -7,7 +7,7 @@ export default function MovieListPage() {
     const [filmes, setFilmes] = useState([])
 
     useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=7c572a9f5b3ba776080330d23bb76e1e&language=pt-br&page=${currentPage}`)
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=7c572a9f5b3ba776080330d23bb76e1e&language=pt-br`)
         .then(response => response.json())
         .then(data => setFilmes(data.results))
         .catch(error => console.error(error))
