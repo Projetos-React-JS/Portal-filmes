@@ -9,9 +9,12 @@ import MovieDetailPage from './pages/MovieDetailPage.jsx'
 import Home from './pages/Home.jsx'
 import GenreList from './pages/GenreList.jsx'
 import PageNotFound from './pages/PageNotFound.jsx'
+import Favorites from './pages/Favorites.jsx'
 import Contato from './pages/Contato.jsx'
 
 import { ThemeProvider } from "@material-tailwind/react";
+import { FavoritesProvider } from './context/FavoritesContext.jsx'
+
 
 const router= createBrowserRouter([
   {
@@ -23,6 +26,7 @@ const router= createBrowserRouter([
       {path: '/movies/:id', element: <MovieDetailPage />},
       {path: '/genre', element: <GenreList />},
       {path: '/genre/:genero', element: <MoviesByGenrePage />},
+      {path: '/favoritos', element: <Favorites/>},
       {path: '/contato', element: <Contato/>},
       {path: '*', element: <PageNotFound/>}
     ]
@@ -32,7 +36,9 @@ const router= createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ThemeProvider>
-    <RouterProvider router={router} />
+      <FavoritesProvider>
+        <RouterProvider router={router} />
+      </FavoritesProvider>
     </ThemeProvider>
   </StrictMode>,
 )
