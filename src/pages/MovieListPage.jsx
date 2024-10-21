@@ -1,10 +1,49 @@
-export default function MovieListPage(){
-    return(
+import { useEffect, useState } from "react"
+import MovieCard from "../components/MovieCard"
+
+export default function MovieListPage() {
+
+    const [search, setSearch] = useState("")
+    const [filmes, setFilmes] = useState([])
+
+    useEffect(() => {
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=7c572a9f5b3ba776080330d23bb76e1e&language=pt-br`)
+        .then(response => response.json())
+        .then(data => setFilmes(data.results))
+        .catch(error => console.error(error))
+        .finally(() => console.log('fetch finalizado'));
+      }, []);
+
+    const handleSearch = (event) => {
+        setSearch(event.target.value)
+        console.log(search)
+    }
+
+    const filmesFiltrados = filmes.filter(filme => filme.title.toLowerCase().includes(search.toLowerCase()))
+
+    return (
         <>
-        <h1>Movie List Page</h1>
-        {/* Exibe a lista de todos os filmes disponíveis categorizados por gênero.
-        Cada filme na lista é mostrado com uma imagem, 
-        título e um link para a página de detalhes do filme.*/}
+            <h2>Veja o catálogo completo de filmes</h2>
+            <input
+                className="text-black"
+                type="text"
+                id="search"
+                value={search}
+                onChange={handleSearch}
+            />
+            <section className="flex">
+                {
+                    filmesFiltrados.length > 0 ?
+
+                        filmesFiltrados
+                            .map(filme => (
+                                <MovieCard key={filme.id} {...filme} />
+                            ))
+                        :
+                        <p> Filme não encontrado</p>
+                }
+            </section>
         </>
     )
 }
+
