@@ -1,6 +1,7 @@
 export default function CardContainer({ titulo, children }) {
-    return (
-        <div>
+
+    return(
+        
             <h1>{titulo}</h1>
             <div className="flex">
                 {children}

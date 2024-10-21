@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Login from "./Login";
@@ -23,6 +24,7 @@ export default function Header() {
                         <li><NavLink to="/genre">Gêneros</NavLink></li>
                         <li><NavLink to="/contato">Contato</NavLink></li>
                         {isLogged && <li><NavLink to="/settings">Configurações</NavLink></li>}
+
                     </ul>
                 </nav>
                 <Login isLogged={isLogged} handleLogin={handleLogin} />

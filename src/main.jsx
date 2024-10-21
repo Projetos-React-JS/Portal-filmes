@@ -1,6 +1,8 @@
+
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
 import App from './App.jsx'
 import './index.css'
 import Contato from './pages/Contato.jsx'
@@ -10,6 +12,8 @@ import MovieDetailPage from './pages/MovieDetailPage.jsx'
 import MovieListPage from './pages/MovieListPage.jsx'
 import MoviesByGenrePage from './pages/MoviesByGenrePage.jsx'
 import PageNotFound from './pages/PageNotFound.jsx'
+
+
 
 const router = createBrowserRouter([
   {
@@ -31,4 +35,5 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
   </StrictMode>,
+
 )
