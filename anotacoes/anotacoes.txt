@@ -30,3 +30,39 @@ Parecido com postman, mas web
 Jogar a URL com a API e o Lang pra mandar e pegar o JSON com GET
 GET
 https://hoppscotch.io/
+
+LOCALSTORAGE
+WEB STORAGE
+COOKIES
+
+APPLICATION, INSPECIONAR
+LOCAL, SESSION, COOKIES
+
+Onde ele pode ser usado??
+
+A capacidade de guardar é pequena
+Local - 10mb máximo
+Cookies - 4kb máximo - Expira automaticamente
+Session - 10mb máximo - Expira automaticamente
+Local - Deletar manualmente
+Session - Fechar a guia
+
+Rascunho do Whatsapp
+Recorde de Joguinho
+Carrinho de Compras
+
+document.cookie
+
+setItem()
+getItem()
+removeItem()
+key()
+clear()
+
+JSON.stringify()
+
+transforma de objeto para string
+
+JSON.parse()
+
+transforma de string para objeto

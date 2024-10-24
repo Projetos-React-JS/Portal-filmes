@@ -8,7 +8,8 @@ export default function Home() {
   const [error, setError] = useState(null);
 
   // IDs dos filmes para os quais queremos buscar detalhes
-  const movieIds = [680, 299534, 597, 155, 278, 274, 807, 550, 1225683]; // IDs de exemplo
+  const movieIds = [680, 299534, 597, 155, 278, 274, 807, 550, 1225683, 533535, 
+                    933260, 945961, 1184918, 1079091, 1144962, 912649, 698687]; // IDs de exemplo
 
   // Função para buscar detalhes de cada filme usando o endpoint `/movie/{id}`
   const fetchMovieDetails = async (id) => {

@@ -73,7 +73,7 @@ export default function MovieListPage() {
                 onChange={handleSearch}
                 placeholder="Buscar filmes..."
             />
-            <section className="flex">
+            <section className="flex flex-wrap justify-between gap-4">
                 {
                     isLoading ? <p>Carregando...</p>
                     :

@@ -11,6 +11,7 @@ import MovieByGenrePage from './pages/MoviesByGenrePage.jsx'
 import PageNotFound from './pages/PageNotFound.jsx'
 import "./index.css"
 import Contato from './pages/Contato.jsx'
+import Favoritos from './pages/Favoritos.jsx'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
       {path: "/genero/:id", element: <MovieByGenrePage/>},
       {path: "/configuracoes", element: <h1>Configurações</h1>},
       {path: "/contato", element: <Contato/>},
+      {path: "/favoritos", element: <Favoritos/>},
       {path: "*", element: <PageNotFound/>},
     ]
   },
