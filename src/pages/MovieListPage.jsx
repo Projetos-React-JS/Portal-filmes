@@ -5,14 +5,16 @@ export default function MovieListPage() {
 
     const [search, setSearch] = useState("")
     const [filmes, setFilmes] = useState([])
+    const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
+        setIsLoading(true)
         fetch(`https://api.themoviedb.org/3/movie/popular?api_key=7c572a9f5b3ba776080330d23bb76e1e&language=pt-br`)
-        .then(response => response.json())
-        .then(data => setFilmes(data.results))
-        .catch(error => console.error(error))
-        .finally(() => console.log('fetch finalizado'));
-      }, []);
+            .then(response => response.json())
+            .then(data => setFilmes(data.results))
+            .catch(error => console.error(error))
+            .finally(() => setIsLoading(false));
+    }, []);
 
     const handleSearch = (event) => {
         setSearch(event.target.value)
@@ -31,16 +33,18 @@ export default function MovieListPage() {
                 value={search}
                 onChange={handleSearch}
             />
-            <section className="flex">
+            <section className="flex flex-wrap justify-between gap-4">
                 {
-                    filmesFiltrados.length > 0 ?
+                    isLoading ? <p>Carregando...</p> :
 
-                        filmesFiltrados
-                            .map(filme => (
-                                <MovieCard key={filme.id} {...filme} />
-                            ))
-                        :
-                        <p> Filme não encontrado</p>
+                        filmesFiltrados.length > 0 ?
+
+                            filmesFiltrados
+                                .map(filme => (
+                                    <MovieCard key={filme.id} {...filme} />
+                                ))
+                            :
+                            <p> Filme não encontrado</p>
                 }
             </section>
         </>
