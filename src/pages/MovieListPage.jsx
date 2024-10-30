@@ -31,7 +31,7 @@ export default function MovieListPage() {
                 value={search}
                 onChange={handleSearch}
             />
-            <section className="flex">
+            <section className="flex flex-wrap ">
                 {
                     filmesFiltrados.length > 0 ?
 
