@@ -39,14 +39,7 @@ export default function GenreListPage(){
     
     //const filmesFiltrados = filmes.filter(filme => filme.title.toLowerCase().includes(search.toLowerCase()))
     
-    const renderizaGenero = (generoSelecionado) =>{
-      const generosFiltrados = filmes.filter(filme => filme.genre_id.includes(generoSelecionado))
-      
-          
-            
-      generosFiltrados.map(filme => (<MovieCard key={filme.id} {...filmes}/>))          
-        
-    }
+    
   return(
         <>
         <h1>Genre Page</h1>
@@ -57,7 +50,10 @@ export default function GenreListPage(){
         } 
         </select>
         <section className="flex">
-        {renderizaGenero}
+        {
+          filmes.filter(filme => filme.genre_id.includes(generoSelecionado))
+          .map(filme => <MovieCard key = {filme.id} {...filme}/>)
+        }
         </section>
         
         </>
