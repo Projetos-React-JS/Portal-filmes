@@ -22,7 +22,6 @@ export default function MovieDetailPage(){
         <div className='h-screen bg-no-repeat flex justify-center items-center' style={{backgroundImage:`url(https://image.tmdb.org/t/p/w1280${filme.backdrop_path})`}}>
             <img src={`https://image.tmdb.org/t/p/w154${filme.poster_path}`}></img>
             <h1 className='text-center'>{filme.title}</h1>
-
         </div>
         </>
     )
