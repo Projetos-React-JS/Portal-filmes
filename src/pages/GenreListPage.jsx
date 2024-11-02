@@ -5,13 +5,14 @@ export default function GenreListPage(){
   
   const  [generos, setGeneros] = useState([])
   const [filmes, setFilmes] = useState([])
-  const [generoSelecionado, setGeneroSelecionado] = useState([])
+  const [generoSelecionado, setGeneroSelecionado] = useState(null)
 
     useEffect(() => {
         fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=7c572a9f5b3ba776080330d23bb76e1e&language=pt-br")
         .then(response => response.json())
         .then(data => {console.log(data)
           setGeneros(data.genres)
+          console.log(data.genres)
         })
         .catch(error => console.error(error))
         .finally(()=>console.log('fetch finalizado'))
@@ -31,14 +32,13 @@ export default function GenreListPage(){
     }, []);
 
     const handleSelect =()=>{
-      let select = document.querySelector('#generos')
-      const  optionSelected = select.opions[select.value]
-      console.log(optionSelected)
-      setGeneroSelecionado[optionSelected]
+      let select = document.querySelector('#generos').value
+      
+      
+      setGeneroSelecionado(select)
+      console.log(generoSelecionado)
     }
-    
-    //const filmesFiltrados = filmes.filter(filme => filme.title.toLowerCase().includes(search.toLowerCase()))
-    
+  
     
   return(
         <>
@@ -51,7 +51,7 @@ export default function GenreListPage(){
         </select>
         <section className="flex">
         {
-          filmes.filter(filme => filme.genre_id.includes(generoSelecionado))
+          filmes.filter(filme => filme.genre_ids.includes(parseInt(generoSelecionado)))
           .map(filme => <MovieCard key = {filme.id} {...filme}/>)
         }
         </section>
