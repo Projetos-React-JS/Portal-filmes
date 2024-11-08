@@ -27,16 +27,16 @@ export default function MovieListPage() {
     const filmesFiltrados = filmes.filter(filme => filme.title.toLowerCase().includes(search.toLowerCase()))
 
     return (
-        <>          
-            <h2>Veja o catálogo completo de filmes</h2>
+        <div className="ml-12">
+            <h2 className="font-bold text-3xl my-3">Veja o catálogo completo de filmes</h2>
             <input
-                className="text-black"
+                className="relative  bg-gray-50ring-0 outline-none border border-neutral-500 text-neutral-900 placeholder-violet-700 text-sm rounded-lg focus:ring-violet-500  focus:border-violet-500 block w-64 p-2.5 checked:bg-emerald-500"
                 type="text"
                 id="search"
                 value={search}
-                onChange={handleSearch}
+                onChange={handleSearch}            
             />
-            <section className="flex flex-wrap between gap-4">
+            <section className="flex flex-wrap between gap-4 mt-6">
 
                 {
 
@@ -53,7 +53,8 @@ export default function MovieListPage() {
                         <p> Filme não encontrado</p>
                 }
             </section>
-        </>
+        </div>     
+        
     )
 }
 

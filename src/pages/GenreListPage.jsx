@@ -41,21 +41,26 @@ export default function GenreListPage(){
   
     
   return(
-        <>
-        <h1>Genre Page</h1>
-        <select name="generos" id="generos" className="text-black" onChange={handleSelect}>
-          <option  className="text-black" defaultValue>Escolha o genero</option>
-        {
-          generos.map(genero=><option className="text-black" value={genero.id} key={genero.name}>{genero.name}</option>)           
-        } 
-        </select>
-        <section className="flex">
-        {
-          filmes.filter(filme => filme.genre_ids.includes(parseInt(generoSelecionado)))
-          .map(filme => <MovieCard key = {filme.id} {...filme}/>)
-        }
-        </section>
+      <>
+        <div className="flex flex-col">
+          <div className="flex justify-center align-middle m-6">
+            <h1 className="text-2xl">Você deseja pesquisar filmes do genero </h1>
+            <select name="generos" id="generos" className="text-black w-[300px] ml-4" onChange={handleSelect}>
+              <option  className="text-black" defaultValue>Escolha o genero</option>
+            {
+              generos.map(genero=><option className="text-black" value={genero.id} key={genero.name}>{genero.name}</option>)           
+            } 
+            </select>
+          </div>
+          <section className=" ml-10 flex gap-10">
+          {
+            filmes.filter(filme => filme.genre_ids.includes(parseInt(generoSelecionado)))
+            .map(filme => <MovieCard key = {filme.id} {...filme}/>)
+          }
+          </section>
+        </div>
         
-        </>
+      </>
+        
     )
 }
